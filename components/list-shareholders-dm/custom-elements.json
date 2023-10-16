@@ -1,0 +1,117 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ListShareholdersDm",
+          "declaration": {
+            "name": "ListShareholdersDm",
+            "module": "./src/ListShareholdersDm.js"
+          }
+        }
+      ],
+      "entrypoint": "index.js",
+      "defaultEntrypoint": true
+    },
+    {
+      "kind": "javascript-module",
+      "path": "list-shareholders-dm.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "list-shareholders-dm",
+          "declaration": {
+            "name": "ListShareholdersDm",
+            "module": "/src/ListShareholdersDm.js"
+          }
+        }
+      ],
+      "entrypoint": "list-shareholders-dm.js",
+      "defaultEntrypoint": false
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/ListShareholdersDm.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "![LitElement component](https://img.shields.io/badge/litElement-component-blue.svg)\n\nThis component Data Manager",
+          "name": "ListShareholdersDm",
+          "members": [
+            {
+              "kind": "method",
+              "name": "getData",
+              "description": "Get the data from the external service and generate an event with the response."
+            },
+            {
+              "kind": "method",
+              "name": "_fireEvent",
+              "parameters": [
+                {
+                  "name": "eventName"
+                },
+                {
+                  "name": "details"
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "host",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "description": "Receives the url of the service to be consumed",
+              "default": "\"\"",
+              "attribute": "host"
+            }
+          ],
+          "events": [
+            {
+              "name": "eventName",
+              "type": {
+                "text": "CustomEvent"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "host",
+              "type": {
+                "text": "string"
+              },
+              "description": "Receives the url of the service to be consumed",
+              "default": "\"\"",
+              "fieldName": "host"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit-element"
+          },
+          "tagName": "list-shareholders-dm",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ListShareholdersDm",
+          "declaration": {
+            "name": "ListShareholdersDm",
+            "module": "src/ListShareholdersDm.js"
+          }
+        }
+      ]
+    }
+  ],
+  "packageName": "@bbva-web-components/list-shareholders-dm"
+}

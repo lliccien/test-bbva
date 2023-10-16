@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>list-shareholders-ui demo</title>
+    <script>
+      window.IntlMsg = window.IntlMsg || {};
+      window.IntlMsg.lang = document.documentElement.lang;
+      window.IntlMsg.localesHost = '.';
+    </script>
+    <script type="module" src="./demo.js"></script>
+  </head>
+
+  <body>
+    <list-shareholders-ui></list-shareholders-ui>
+    <script>
+      const component = document.querySelector('list-shareholders-ui');
+      component.dataManagerHost = 'http://localhost:3002/accionistas';
+      component.business = false;
+    </script>
+  </body>
+</html>

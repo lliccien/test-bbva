@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>list-shareholders-dm demo</title>
+    <script>
+      window.IntlMsg = window.IntlMsg || {};
+      window.IntlMsg.lang = document.documentElement.lang;
+      window.IntlMsg.localesHost = '.';
+    </script>
+    <script type="module" src="./demo.js"></script>
+  </head>
+
+  <body>
+    <list-shareholders-dm
+      host="http://localhost:3002/accionistas"
+    ></list-shareholders-dm>
+    <button id="dm">Get Data</button>
+    <script>
+      const dataManager = document.querySelector('list-shareholders-dm');
+      const btnDm = document.querySelector('#dm');
+
+      btnDm.addEventListener('click', () => {
+        dataManager.getData();
+      });
+    </script>
+  </body>
+</html>
